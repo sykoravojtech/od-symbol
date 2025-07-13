@@ -74,23 +74,27 @@ rm -rf data/rpi_images_filt
 
 <!-- Running basics -->
 ## Inference
-Done using `extraction.src.core.inference_OD`
+Done using `extraction.src.core.inference_OD`. If verbosity v=2, then output found in `extraction/output`.
+
 single image
 ```
 poetry run python -m extraction.src.core.inference_OD -c extraction/config/object_detection_inf_cghd.json -i data/cghd_sample/drafter_1/images/C1_D2_P1.jpg -v 0
+
 poetry run python -m extraction.src.core.inference_OD -c extraction/config/object_detection_inf_rpi.json -i data/rpi_pico_sample/drafter_31/images/48c9152c-0-1.jpg -v 0
 ```
 whole dataset
 ```
 poetry run python -m extraction.src.core.inference_OD -c extraction/config/object_detection_inf_cghd.json --dir data/cghd_raw -v 0
+
 poetry run python -m extraction.src.core.inference_OD -c extraction/config/object_detection_inf_rpi.json --dir data/rpi_pico_sample/ -v 0
 ```
 
 ## Training
-Done using `extraction.src.core.finetuning`
+Done using `extraction.src.core.finetuning`. Results found in `extraction/model/`.
 ```
-poetry run python -m extraction.src.core.finetuning od-symbol/extraction/config/od_enh/od_focal-giou.json
+poetry run python -m extraction.src.core.finetuning extraction/config/od_enh/od_focal-giou.json
 ```
+
 
 
 <!-- Other stuff -->

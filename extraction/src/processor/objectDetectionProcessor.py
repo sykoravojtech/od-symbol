@@ -58,6 +58,8 @@ class ObjectDetectionProcessor(Processor):
 
     def get_cghd_transforms(self, augmentations) -> transforms.Compose:
         """x% chance ofusing transforms, else just ToTensor."""
+        if augmentations is True:
+            augmentations = ["color_jitter"]
         print(f"Using transforms = {augmentations}")
 
         aug_block = []

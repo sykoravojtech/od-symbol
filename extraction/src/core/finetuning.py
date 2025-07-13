@@ -167,28 +167,28 @@ def apply_set_fasterrcnn(
         target = [{k: v.to(device) for k, v in t.items()} for t in target]
 
         # Validate target data (TODO REMOVE)
-        skip_batch = False
-        for i, t in enumerate(target):
-            if "boxes" in t and len(t["boxes"]) > 0:
-                # Check for invalid box coordinates
-                boxes = t["boxes"]
-                if torch.any(torch.isnan(boxes)) or torch.any(torch.isinf(boxes)):
-                    print(
-                        f"Warning: Invalid boxes detected in target {i}, skipping batch"
-                    )
-                    skip_batch = True
-                    break
-                # Check if boxes are valid (x1 < x2, y1 < y2)
-                if torch.any(boxes[:, 0] >= boxes[:, 2]) or torch.any(
-                    boxes[:, 1] >= boxes[:, 3]
-                ):
-                    print(f"Warning: Invalid box format in target {i}, skipping batch")
-                    skip_batch = True
-                    break
+        # skip_batch = False
+        # for i, t in enumerate(target):
+        #     if "boxes" in t and len(t["boxes"]) > 0:
+        #         # Check for invalid box coordinates
+        #         boxes = t["boxes"]
+        #         if torch.any(torch.isnan(boxes)) or torch.any(torch.isinf(boxes)):
+        #             print(
+        #                 f"Warning: Invalid boxes detected in target {i}, skipping batch"
+        #             )
+        #             skip_batch = True
+        #             break
+        #         # Check if boxes are valid (x1 < x2, y1 < y2)
+        #         if torch.any(boxes[:, 0] >= boxes[:, 2]) or torch.any(
+        #             boxes[:, 1] >= boxes[:, 3]
+        #         ):
+        #             print(f"Warning: Invalid box format in target {i}, skipping batch")
+        #             skip_batch = True
+        #             break
 
-        # TODO REMOVE
-        if skip_batch:
-            continue
+        # # TODO REMOVE
+        # if skip_batch:
+        #     continue
 
         # Clear optimizer gradients
         optimizer.zero_grad()
@@ -344,31 +344,25 @@ def apply_set(
 
 def get_cpu_info():
     """Get detailed CPU information for better debugging on CPU-only systems"""
-    try:
-        cpu_info = {
-            "CPU": platform.processor(),
-            "System": platform.system() + " " + platform.release(),
-            "Total RAM": f"{psutil.virtual_memory().total / (1024**3):.2f} GB",
-            "Available RAM": f"{psutil.virtual_memory().available / (1024**3):.2f} GB",
-            "CPU Count": os.cpu_count(),
-            "CPU Usage": f"{psutil.cpu_percent()}%",
-        }
-        return cpu_info
-    except:
-        return {"CPU": "Error getting CPU info"}
+    cpu_info = {
+        "CPU": platform.processor(),
+        "System": platform.system() + " " + platform.release(),
+        "Total RAM": f"{psutil.virtual_memory().total / (1024**3):.2f} GB",
+        "Available RAM": f"{psutil.virtual_memory().available / (1024**3):.2f} GB",
+        "CPU Count": os.cpu_count(),
+        "CPU Usage": f"{psutil.cpu_percent()}%",
+    }
+    return cpu_info
 
 
 def log_memory_stats(device):
     """Log memory statistics to help with debugging memory issues"""
     print("\n--- Memory Statistics ---")
     # System memory
-    try:
-        vm = psutil.virtual_memory()
-        print(
-            f"System RAM: {vm.used/1e9:.2f} GB used / {vm.total/1e9:.2f} GB total ({vm.percent}%)"
-        )
-    except:
-        print("Could not get system memory stats")
+    vm = psutil.virtual_memory()
+    print(
+        f"System RAM: {vm.used/1e9:.2f} GB used / {vm.total/1e9:.2f} GB total ({vm.percent}%)"
+    )
 
     # GPU memory if available
     if device.type == "cuda":
@@ -431,7 +425,6 @@ def finetune(
         cpu_info = get_cpu_info()
         for key, value in cpu_info.items():
             print(f"{key}: {value}")
-        print("WARNING: Training on CPU may be very slow")
     print("=======================\n")
 
     # Log initial memory stats
