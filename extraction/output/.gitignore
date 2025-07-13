@@ -1,0 +1,9 @@
+*
+*/
+!.gitignore
+!backup/
+!backup/**
+tta/
+tta_multiscale/
+other/
+plotting/

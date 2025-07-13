@@ -1,0 +1,70 @@
+{
+    "__background__": "background:BG",
+
+    "text": "Text:T",
+    "junction": "Net:Junction",
+    "crossover": "Net:Crossover",
+    "terminal": "Connector:Terminal",
+    "gnd": "power:GND",
+    "vss": "power:VSS", 
+
+    "voltage.dc": "Simulation_SPICE:VDC",
+    "voltage.ac": "Simulation_SPICE:VSIN",
+    "voltage.battery": "Device:Battery_Cell",
+
+    "resistor":"Device:R" ,  
+    "resistor.adjustable": "Device:R_POT_US",
+    "resistor.photo": "Device:R_PHOTO",
+ 
+    "capacitor.unpolarized" :"Device:C",  
+    "capacitor.polarized": "Device:CP",     
+
+    "inductor": "pspice:INDUCTOR",  
+    "transformer": "Device:Transformer_1P_1S",
+
+    "diode": "pspice:DIODE",           
+    "diode.light_emitting": "Device:LED",
+    "diode.thyrector": "Device:D-TVS",    
+    "diode.zener": "Device:D_Zener",
+
+    "diac": "Device:DIAC",    
+    "triac": "Device:Q_TRIAC_A1A2G",
+    "thyristor": "Triac_Thyristor:BT136_500",
+    "varistor": "Device:Varistor",
+
+    "transistor.bjt": "Device:Q_NPN_BCE",
+    "transistor.fet": "Device:Q_NMOS_DGS",
+    "transistor.photo": "Device:Q_Photo_NPN",
+
+    "operational_amplifier": "Simulation_SPICE:OPAMP"   ,               
+    "operational_amplifier.schmitt_trigger": "Isolator:H11L1",   
+    "optocoupler": "Isolator:NSL-32",                      
+
+    "integrated_circuit": "IC",   
+    "integrated_circuit.ne555": "Timer:LM555",
+    "integrated_circuit.voltage_regulator": "Regulator_Linear:L7805",
+    "integrated_circuit.microcontroller": "MCU_Microchip_ATmega:ATmega8-16AU",
+   
+    "xor": "74xx:74LS386",
+    "and": "74xGxx:74LVC2G08",
+    "or":  "74xGxx:74LVC2G32",
+    "not": "74xGxx:74LVC2G04",
+    "nand": "74xGxx:74LVC2G00",
+    "nor": "74xGxx:74LVC2G02",
+
+    "probe.current": "Device:Ampermeter_AC_DC",
+    "probe.voltage": "Device:Voltmeter_AC_DC",
+
+    "switch": "Switch:SW_Push",
+    "relay": "Relay:FINDER-32.21-x000",
+
+    "socket": "Connector:WallSocket",
+    "fuse": "Device:Fuse",
+
+    "speaker": "Device:Speaker",
+    "motor": "Motor:Motor_AC",
+    "lamp": "Device:Lamp",
+    "microphone": "Device:Microphone",
+    "crystal": "Device:Crystal",
+    "antenna": "Device:Antenna"
+}

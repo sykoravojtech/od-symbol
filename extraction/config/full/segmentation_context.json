@@ -1,0 +1,36 @@
+{
+  "model_class": "extraction.src.models.unet/Unet",
+  "model_parameter": {
+    "channels_in": 6,
+    "channels_out": 1
+  },
+  "dataloader_class": "extraction.src.loader.segmentationLoader/SegmentationLoader",
+  "processor_class": "extraction.src.processor.segmentationProcessor/SegmentationProcessor",
+  "processor_parameter": {
+    "patch_size": 256,
+    "augment_samples_per_image": 50,
+    "context": true
+  },
+  "optimizer_class": "torch.optim/Adam",
+  "optimizer_parameter": {
+    "lr": 0.0001,
+    "weight_decay": 0.00001
+  },
+  "scheduler_class": "torch.optim.lr_scheduler/StepLR",
+  "scheduler_parameter": {
+    "step_size": 1,
+    "gamma": 0.99
+  },
+  "training_parameter": {
+    "drafters_set_train": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24],
+    "drafters_set_val": [25, 26, 27],
+    "drafter_set_test": [28, 29, 30],
+    "db_path": "data/cghd_raw",
+    "batch_size": 16,
+    "epochs": 50,
+    "name": "segmentation",
+    "loss_fn": "torch.nn/MSELoss",
+    "acc_fn": "extraction.src.utils.binaryAccuracy/bin_acc",
+    "debug": false
+  }
+}

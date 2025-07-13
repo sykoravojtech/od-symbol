@@ -1,0 +1,68 @@
+{
+    "text":             [],
+    "junction":         [],
+    "crossover":        [],
+    "terminal":         ["A"],
+    "gnd":              ["A"],
+    "vss":              ["A"],
+
+    "voltage.dc":  ["P", "N"],
+    "voltage.ac":  ["A", "B"],
+    "voltage.battery": ["P", "N"],
+
+    "resistor":        ["A", "B"],
+    "resistor.adjustable":  ["A", "B", "adj"],
+    "resistor.photo":  ["A", "B"],
+
+    "capacitor.unpolarized":    ["A", "B"],
+    "capacitor.polarized":      ["P", "N"],
+
+    "inductor":     ["A", "B"],
+    "transformer":  ["A_1", "A_2", "B_1", "B_2"],
+
+    "diode":                ["An", "Ca"],
+    "diode.light_emitting": ["An", "Ca"],
+    "diode.thyrector":      ["A", "B"],
+    "diode.zener":          ["An", "Ca"],
+
+    "diac":                 ["An", "Ca"],
+    "triac":                ["An", "Ca", "G"],
+    "thyristor":            ["An", "Ca", "G"],
+    "varistor":             ["A", "B"],
+
+    "transistor.bjt":   ["B", "C", "E"],
+    "transistor.fet":   ["G", "S", "D"],
+    "transistor.photo": ["An", "Ca"],
+
+
+    "operational_amplifier":                ["V+", "V-", "V_O", "VS+", "VS-"],
+    "operational_amplifier.schmitt_trigger":    ["I", "O"],
+    "optocoupler":                              ["An", "Ca", "C", "E", "B"],
+
+
+    "integrated_circuit.ne555":             ["GND", "TR", "Q", "R", "CV", "THR", "DIS", "VCC"],
+    "integrated_circuit.voltage_regulator": ["I", "O", "GND"],
+
+    "xor": ["A", "B", "OUTPUT"],
+    "and": ["A", "B", "OUTPUT"],
+    "or":  ["A", "B", "OUTPUT"],
+    "not":  ["I", "O"],
+    "nand": ["A", "B", "OUTPUT"],
+    "nor":  ["A", "B", "OUTPUT"],
+
+    "probe.current": ["A"],
+    "probe.voltage": ["A"],
+
+    "switch":   ["A", "B"],
+    "relay":    ["A_1", "A_2", "11", "12", "14"],
+
+    "socket":  ["A", "B"],
+    "fuse":     ["A", "B"],
+
+    "speaker":      ["A", "B"],
+    "motor":        ["A", "B"],
+    "lamp":         ["A", "B"],
+    "microphone":   ["A", "B"],
+    "antenna":      ["I"],
+    "crystal":      ["A", "B"]
+}

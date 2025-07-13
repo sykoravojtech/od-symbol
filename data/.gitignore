@@ -1,0 +1,15 @@
+# Ignore everything
+/*
+
+# Un-ignore the utils folder and its contents
+!utils/
+!utils/**
+utils/**/__pycache__/
+
+!annotations/
+
+!thesis_example/
+!thesis_example/**
+
+!.gitignore
+!README.md

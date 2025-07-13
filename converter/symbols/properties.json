@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Name",
+    "class": "resistor",
+    "regex": "^R[0-9]+$"
+  },
+  {
+    "name": "Name",
+    "regex": "^VR[0-9]+$"
+  },
+  {
+    "name": "Name",
+    "regex": "^C[0-9]+$"
+  },
+  {
+    "name": "Name",
+    "regex": "^Q[0-9]+$"
+  },
+  {
+    "name": "Name",
+    "regex": "^D[0-9]+$"
+  },
+  {
+    "name": "Name",
+    "regex": "^L[0-9]+$"
+  },
+  {
+    "name": "Name",
+    "regex": "^(SW|Sw)[0-9]+$"
+  },
+  {
+    "name": "Voltage",
+    "regex": "(V|VCD|VAC)$"
+  },
+  {
+    "name": "Current",
+    "regex": "A$"
+  },
+  {
+    "name": "Wattage",
+    "regex": "(W|Watt|Watts)$"
+  },
+  {
+    "name": "Frequency",
+    "regex": "[0-9]+[m|M|k|K|G]?(hz|Hz|HZ)$"
+  },
+  {
+    "name": "Resistance",
+    "regex": "[0-9]+[k|K|m|M|meg]?(Ω|ohm|Ohm|Ohms|ohms)$"
+  },
+  {
+    "name": "Capacity",
+    "regex": "[0-9]+[u|µ|n|p][f|F]$"
+  },
+  {
+    "name": "Device",
+    "class": "transistor.bjt",
+    "regex": "2N4401"
+  },
+  {
+    "name": "Taper",
+    "class": "resistor.adjustable",
+    "regex": "(log|lin)$"
+  }
+]

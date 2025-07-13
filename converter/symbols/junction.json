@@ -1,0 +1,13 @@
+{
+    "geometry": [
+        {
+            "type": "Circle",
+            "center": {
+                "x": 0.5,
+                "y": 0.5
+            },
+            "radius": 0.25,
+            "fill": true
+        }
+    ]
+}

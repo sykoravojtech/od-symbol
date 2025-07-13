@@ -1,0 +1,70 @@
+{  
+    "__background__": "https://www.wikidata.org/wiki/Q43035",
+
+    "text": "https://www.wikidata.org/wiki/Q234460",
+    "junction": "https://www.wikidata.org/wiki/Q5357725",
+    "crossover": "https://www.wikidata.org/wiki/Q17087755",
+    "terminal": "https://www.wikidata.org/wiki/Q182610",
+    "gnd": "https://www.wikidata.org/wiki/Q6501125",
+    "vss": "https://www.wikidata.org/wiki/Q11252983",
+
+    "voltage.dc": "https://www.wikidata.org/wiki/Q352670",
+    "voltage.ac": "https://www.wikidata.org/wiki/Q1161128",
+    "voltage.battery": "https://www.wikidata.org/wiki/Q267298",
+
+    "resistor": "https://www.wikidata.org/wiki/Q5321" ,  
+    "resistor.adjustable": "https://www.wikidata.org/wiki/Q187868",
+    "resistor.photo": "https://www.wikidata.org/wiki/Q194120",
+
+    "capacitor.unpolarized": "https://www.wikidata.org/wiki/Q337701", 
+    "capacitor.polarized": "https://www.wikidata.org/wiki/Q1326992",     
+
+    "inductor": "https://www.wikidata.org/wiki/Q5325",  
+    "transformer": "https://www.wikidata.org/wiki/Q11658",
+
+    "diode": "https://www.wikidata.org/wiki/Q11656",           
+    "diode.light_emitting": "https://www.wikidata.org/wiki/Q34002361",
+    "diode.thyrector": "https://www.wikidata.org/wiki/Q1552671",   
+    "diode.zener": "https://www.wikidata.org/wiki/Q180586",
+
+    "diac": "https://www.wikidata.org/wiki/Q176042",  
+    "triac": "https://www.wikidata.org/wiki/Q221499",
+    "thyristor": "https://www.wikidata.org/wiki/Q180805",
+    "varistor": "https://www.wikidata.org/wiki/Q465115",
+
+    "transistor.bjt": "https://www.wikidata.org/wiki/Q5339",
+    "transistor.fet": "https://www.wikidata.org/wiki/Q176097",
+    "transistor.photo": "https://www.wikidata.org/wiki/Q1041891",
+
+    "operational_amplifier": "https://www.wikidata.org/wiki/Q178947" ,               
+    "operational_amplifier.schmitt_trigger": "https://www.wikidata.org/wiki/Q202957",   
+    "optocoupler": "https://www.wikidata.org/wiki/Q849084",
+
+    "integrated_circuit": "https://www.wikidata.org/wiki/Q80831", 
+    "integrated_circuit.ne555": "https://www.wikidata.org/wiki/Q383672",
+    "integrated_circuit.voltage_regulator": "https://www.wikidata.org/wiki/Q6692746",
+    "integrated_circuit.microcontroller": "https://www.wikidata.org/wiki/Q165678",
+   
+    "xor": "https://www.wikidata.org/wiki/Q155516",
+    "and": "https://www.wikidata.org/wiki/Q560370",
+    "or": "https://www.wikidata.org/wiki/Q560398",
+    "not": "https://www.wikidata.org/wiki/Q664575",
+    "nand": "https://www.wikidata.org/wiki/Q575178",
+    "nor": "https://www.wikidata.org/wiki/Q8065380",
+
+    "probe.current": "https://www.wikidata.org/wiki/Q107196487",
+    "probe.voltage": "https://www.wikidata.org/wiki/Q179741",
+
+    "switch": "https://www.wikidata.org/wiki/Q5320",
+    "relay": "https://www.wikidata.org/wiki/Q174053",
+
+    "socket": "https://www.wikidata.org/wiki/Q64537414",
+    "fuse": "https://www.wikidata.org/wiki/Q182221",
+
+    "speaker": "https://www.wikidata.org/wiki/Q570",
+    "motor": "https://www.wikidata.org/wiki/Q72313",
+    "lamp": "https://www.wikidata.org/wiki/Q1138737",
+    "microphone": "https://www.wikidata.org/wiki/Q46384",
+    "antenna": "https://www.wikidata.org/wiki/Q131214",
+    "crystal": "https://www.wikidata.org/wiki/Q4173903"
+}

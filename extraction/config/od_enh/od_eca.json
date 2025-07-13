@@ -1,0 +1,50 @@
+{
+  "model_class": "extraction.src.models.fasterrcnn/FasterRCNN",
+  "model_parameter": {
+    "num_classes": 61,
+    "pretrained_backbone": true,
+    "backbone": "resnet152",
+    "box_detections": 542,
+    "trainable_backbone_layers": 5,
+    "use_focal_loss": false,
+    "use_giou_loss": false
+  },
+  "use_eca": true,
+  "dataloader_class": "extraction.src.loader.imageGraphLoader/ImageGraphLoader",
+  "processor_class": "extraction.src.processor.objectDetectionProcessor/ObjectDetectionProcessor",
+  "processor_parameter": {
+    "score_threshold": 0.8,
+    "classes": ["__background__", "text", "junction", "crossover", "terminal", "gnd", "vss", "voltage.dc", "voltage.ac", 
+                "voltage.battery", "resistor", "resistor.adjustable", "resistor.photo", "capacitor.unpolarized",
+                "capacitor.polarized", "capacitor.adjustable", "inductor", "inductor.ferrite", "inductor.coupled",
+                "transformer", "diode", "diode.light_emitting", "diode.thyrector", "diode.zener", "diac", "triac",
+                "thyristor", "varistor", "transistor.bjt", "transistor.fet", "transistor.photo", "operational_amplifier",
+                "operational_amplifier.schmitt_trigger", "optocoupler", "integrated_circuit", "integrated_circuit.ne555",
+                "integrated_circuit.voltage_regulator", "xor", "and", "or", "not", "nand", "nor", "probe",
+                "probe.current", "probe.voltage", "switch", "relay", "socket", "fuse", "speaker", "motor", "lamp",
+                "microphone", "antenna", "crystal", "mechanical", "magnetic", "optical", "block", "unknown"]
+  },
+  "optimizer_class": "torch.optim.sgd/SGD",
+  "optimizer_parameter": {
+    "lr": 0.004,
+    "weight_decay": 0.0005,
+    "momentum": 0.9
+  },
+  "scheduler_class": "torch.optim.lr_scheduler/StepLR",
+  "scheduler_parameter": {
+    "step_size": 1,
+    "gamma": 0.96
+  },
+  "training_parameter": {
+    "drafters_set_train": [-1,23,24,25,26],
+    "drafters_set_val": [27,28],
+    "drafter_set_test": [29,30,31],
+    "db_path": "data/cghd_raw",
+    "batch_size": 1,
+    "epochs": 50,
+    "name": "object_detection",
+    "loss_fn": "torch.nn/MSELoss",
+    "acc_fn": "extraction.src.utils.accuracy/compute_map_single",
+    "debug": false
+  }
+}

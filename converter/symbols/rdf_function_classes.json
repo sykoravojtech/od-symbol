@@ -1,0 +1,50 @@
+{
+    "AC_input": "https://www.wikidata.org/wiki/Q1161128",
+    "DC_input": "https://www.wikidata.org/wiki/Q1161128",
+    "circuit_output": "https://www.wikidata.org/wiki/Q778569",
+    "digital_signal": "https://www.wikidata.org/wiki/Q20998172",
+    "pulse_width_modulation": "https://www.wikidata.org/wiki/Q585184",
+        
+    "coupling_capacitor": "https://www.wikidata.org/wiki/Q884755",
+    "pull_up": "https://www.wikidata.org/wiki/Q1987617",
+    "voltage_reduction": "https://www.wikidata.org/wiki/Q7940751",
+    "energy_storage": "https://www.wikidata.org/wiki/Q837718",
+    "logic_operation": "https://www.wikidata.org/wiki/Q1166618",
+
+    "diode.bridge": "https://www.wikidata.org/wiki/Q1146554",
+    "diode.reverse.current.protection": "https://www.wikidata.org/wiki/Q11656",
+    "diode.flyback": "https://www.wikidata.org/wiki/Q888791",
+
+    "amplifier.electronic": "https://www.wikidata.org/wiki/Q211554",
+    "amplifier.buffer": "https://www.wikidata.org/wiki/Q978470",
+    "amplifier.common_collector": "https://www.wikidata.org/wiki/Q1799522",
+    "amplifier.common_emitter": "https://www.wikidata.org/wiki/Q1648344",
+    "amplifier.differential": "https://www.wikidata.org/wiki/Q1056298",
+    "amplifier.push_pull": "https://www.wikidata.org/wiki/Q799875",
+    
+    "oscillator.electronic_circuit.555": "https://www.wikidata.org/wiki/Q249997",
+    "oscillator.electronic_circuit.bjt": "https://www.wikidata.org/wiki/Q259838",
+
+    "oscillator.crystal_clock": "https://www.wikidata.org/wiki/Q877055",
+
+    "counter": "https://www.wikidata.org/wiki/Q247299",
+    "timer": "https://www.wikidata.org/wiki/Q186612",
+
+    "switch.electronic": "https://www.wikidata.org/wiki/Q5358435",
+    "switch.electromagnetic": "https://www.wikidata.org/wiki/Q174053",
+    "electronic_protection": "https://www.wikidata.org/wiki/Q17193007",
+    
+    "filter.electronic": "https://www.wikidata.org/wiki/Q327754",
+    "filter.stablizer_capacitor": "https://www.wikidata.org/wiki/Q7315327",
+    "filter.RC": "https://www.wikidata.org/wiki/Q939318",
+    "filter.LC": "https://www.wikidata.org/wiki/Q104810966",
+    "filter.choke": "https://www.wikidata.org/wiki/Q864746",
+
+    "biasing":  "https://www.wikidata.org/wiki/Q719550",
+    "biasing.voltage_divider": "https://www.wikidata.org/wiki/Q466758",
+    "driver_circuit": "https://www.wikidata.org/wiki/Q4167572",
+    "level_shifter": "https://www.wikidata.org/wiki/Q30681555",
+    "voltage_converter": "https://www.wikidata.org/wiki/Q387331",
+    "voltage_regulation": "https://www.wikidata.org/wiki/Q7940752",
+    "programmable_controller": "https://www.wikidata.org/wiki/Q165678"
+}

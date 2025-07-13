@@ -1,0 +1,53 @@
+{
+  "model_class": "extraction.src.models.rotationRegressor/RotationRegressor",
+  "model_parameter": {
+    "conv_features": [64, 128, 256, 512],
+    "kernel_sizes": [5, 2, 2, 3],
+    "pooling": [1, 2, 2, 1],
+    "img_width": 50,
+    "img_height": 50,
+    "in_channels": 3,
+    "lin_features": [4096, 2048, 1024]
+  },
+  "dataloader_class": "extraction.src.loader.imageGraphLoader/ImageGraphLoader",
+  "processor_class": "extraction.src.processor.rotationSnippetProcessor/RotationSnippetProcessor",
+  "processor_parameter": {
+    "rand_crop": 2,
+    "width": 50,
+    "height": 50,
+    "supported_classes": ["capacitor.unpolarized", "capacitor.polarized", "capacitor.adjustable",
+                          "resistor", "resistor.adjustable", "resistor.photo",
+                          "diode", "diode.light_emitting", "diode.zener",
+                          "and", "or", "not", "nand", "nor", "xor",
+                          "fuse", "gnd", "varistor","crystal", "switch",
+                          "operational_amplifier", "motor", "lamp", "inductor", "speaker",
+                          "voltage.ac", "voltage.dc", "voltage.battery",
+                          "transistor.bjt", "transistor.fet", "vss", "text"],
+    "symmetric_classes": ["capacitor.unpolarized", "resistor", "crystal", "fuse", "varistor",
+                          "motor", "lamp", "inductor","voltage.ac"]
+  },
+  "optimizer_class": "torch.optim/SGD",
+  "optimizer_parameter": {
+    "lr": 0.02,
+    "weight_decay": 0.00001,
+    "momentum":0.95
+  },
+  "scheduler_class": "torch.optim.lr_scheduler/StepLR",
+  "scheduler_parameter": {
+    "step_size": 1,
+    "gamma": 0.99
+  },
+  "training_parameter": {
+    "drafters_set_train": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+    "drafters_set_val": [25, 26, 27],
+    "drafter_set_test": [28, 29, 30],
+    "db_path": "data/cghd_raw",
+    "batch_size": 64,
+    "epochs": 100,
+    "name": "rotation",
+    "loss_fn": "torch.nn/MSELoss",
+    "acc_fn": "extraction.src.utils.rotation/angle_distance",
+    "vis_fn": "extraction.src.utils.rotation/rotation_visualisation",
+    "debug": false
+  }
+}
