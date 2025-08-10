@@ -16,7 +16,18 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About the Project
-TODO add abstract
+Object detection for automating the extraction of electric schematics remains affected by two main issues: severe class imbalance and a lack of good training data, forcing a substantial domain shift between messy handwritten and clean computer-generated schematics. This thesis tackles both. First, a new Raspberry Pi (RPi)
+dataset of clean high-resolution CAD schematics is created with 22 images of 1675
+annotated symbols, aimed at working with a domain shift from the CGHD hand-
+drawn dataset of 3137 images and 246k annotations. Second, the Faster R-CNN
+object detector from the Modular Graph Extraction pipeline is enhanced using
+losses, architectural changes, hyperparameter tuning, and image transformations.
+The combination of Focal and GIoU losses, followed by tuning, shows a 7.3% mAP
+increase on CGHD and 3.7% on the RPi dataset, both compared to a strong baseline. Next, a pretrained VLM, Molmo-7B-D, falls short of 32.0% accuracy of the
+Faster R-CNN with 17.5% accuracy on the same object detection task; however, it
+shows basic understanding of the task. This work confirms that a carefully modified
+specialist model beats a pretrained VLM for symbol detection, and releases a new
+RPi dataset to help with cross-domain adaptation.
 
 <!-- GETTING STARTED -->
 # Getting started
