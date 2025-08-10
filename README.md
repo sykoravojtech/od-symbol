@@ -29,6 +29,9 @@ shows basic understanding of the task. This work confirms that a carefully modif
 specialist model beats a pretrained VLM for symbol detection, and releases a new
 RPi dataset to help with cross-domain adaptation.
 
+[Master Thesis](assets/VojtechSykora_MasterThesis.pdf)  
+[Final Presentation](assets/VojtechSykora_FinalPresentation.pdf)
+
 <!-- GETTING STARTED -->
 # Getting started
 ## Cloning the repo
